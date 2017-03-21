@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -eu
+
+module purge
+module use /short/w35/saw562/easybuild/modules/all/Core
+echo $MODULEPATH
+module load gcc/eb6.2.0
+module load netcdf/4.4.1.1
+module load FFTW/3.3.6
+module load udunits
+
+export CPATH=$PWD/rsl/include:$CPATH
+export LD_LIBRARY_PATH=$PWD/rsl/lib:${LD_LIBRARY_PATH:-}
+
+pushd lrose-core
+
+export LROSE_CORE_DIR=$PWD
+export LROSE_INSTALL_DIR=$PWD/../build
+
+source ./build/set_build_env.sh
+
+./build/build_auto -p lrose -x $LROSE_INSTALL_DIR 2>&1 | tee build.log
+
+#make -j 1 -C codebase $* 2>&1 | tee build.log
+
