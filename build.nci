@@ -10,13 +10,8 @@ module load netcdf/4.4.1.1
 module load FFTW/3.3.6
 module load udunits
 
-export CPATH=$PWD/rsl/include:$CPATH
-export LD_LIBRARY_PATH=$PWD/rsl/lib:${LD_LIBRARY_PATH:-}
-
-pushd lrose-core
-
 export LROSE_CORE_DIR=$PWD
-export LROSE_INSTALL_DIR=$PWD/../build
+export LROSE_INSTALL_DIR=/g/data3/hh5/public/apps/lrose/$(git describe --tags)
 
 source ./build/set_build_env.sh
 
