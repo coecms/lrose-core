@@ -444,7 +444,7 @@ def getLibLinkOrder():
                   'devguide',
                   'xview',
                   'olgx',
-                  'trmm_rsl',
+                  #'trmm_rsl',
                   'forayRal']
     
     ################ deprecated ####################
@@ -536,7 +536,7 @@ def getLoadLibList():
                    'hdf5',
                    'udunits2',
                    'expat',
-                   'fl',
+                   #'fl',
                    'X11',
                    'Xext',
                    'pthread',

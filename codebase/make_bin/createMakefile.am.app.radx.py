@@ -444,7 +444,7 @@ def getLibLinkOrder():
                   'devguide',
                   'xview',
                   'olgx',
-                  'trmm_rsl',
+                  #'trmm_rsl',
                   'forayRal']
     
     ################ deprecated ####################

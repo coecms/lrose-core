@@ -80,7 +80,7 @@ def main():
                          'olgx', 'physics', 'radar',
                          'rapformats', 'rapmath', 'rapplot', 'rdi', 'shapelib',
                          'spdb', 'spdbFormats', 'symprod', 'tdrp', 'titan',
-                         'toolsa', 'trmm_rsl', 'xview' ]
+                         'toolsa', 'xview' ]
     else:
         availLibList = options.libList.split(",")
 
